@@ -1,0 +1,416 @@
+.navbar-Dental {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    background-color: #ffffff;      
+    padding: 5px 40px;
+
+    /* CAMBIAMOS A FIXED PARA FORZAR EL COMPORTAMIENTO */
+    position: fixed;       /* Flota por encima de toda la web */
+    top: 0;                /* Se clava al ras de arriba */
+    left: 0;               /* Se alinea a la izquierda de la pantalla */
+    width: 100%;           /* Se estira de lado a lado */
+    z-index: 99999 !important; /* Pasa por encima de absolutamente cualquier imagen */
+    box-sizing: border-box;       /* ? Asegura que el menú pase por ENCIMA de las imágenes y no se tape */
+}
+
+.logo img{
+    width: 180px;
+    height: auto;
+}
+
+/* 2. El contenedor de los enlaces (Tu nuevo <ul>) */
+.navbar-links {
+    list-style: none; /* ¡TRUCO CLAVE! Quita los puntitos negros que el <ul> trae por defecto */
+    display: flex;    /* Pone los <li> en fila horizontal, uno al lado del otro */
+    gap: 35px;        /* Separa los enlaces de forma exacta sin usar márgenes difíciles */
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Estilo para los textos dentro de los enlaces */
+.navbar-links a {
+    text-decoration: none; /* Quita la línea subrayada azul del navegador */
+    color: #708090;        /* Color negro */
+    font-family: 'Arial Black', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+/* 2. Al pasar el cursor por encima (Hover) */
+.navbar-links a:hover {
+  color: #0d5c63 !important; /* Verde DentaClinic */
+}
+
+/* 3. Mientras mantienes presionado el clic */
+.navbar-links a:active {
+  color: #0d5c63 !important;
+}
+
+/* 4. Página en la que te encuentras (Activo) */
+.navbar-links a.active {
+  color: #0d5c63 !important;
+}
+
+
+.item-whatsapp a {
+background-color: #25D366;
+  color: #ffffff !important; /* Forzar texto blanco */
+padding: 8px 18px;
+border-radius: 20px;
+font-weight: bold;
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 8px;
+transition: background-color 0.3s ease;
+margin-top: -7px;
+}
+
+.item-whatsapp a:hover {
+background-color: #1eb954;
+}
+
+.hero-titulo {
+width: 100%;
+text-align: center;
+background-color: #ffffff;
+margin-top: 70px; /* <--- Esto empuja el texto hacia abajo si el navbar es fijo */
+padding: 20px 0;
+position: relative;
+z-index: 1;
+}
+
+.hero-titulo h1 {
+color: #0d5c63; /* Verde teal de DentaClinic */
+font-size: 38px;
+font-weight: 800;
+margin: 0;
+letter-spacing: 1.5px;
+}
+
+/* Ajustes de la imagen para que vaya abajo */
+.hero-image {
+width: 100%;
+max-height: 500px;
+overflow: hidden;
+}
+
+.hero-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+/* Contenedor principal */
+.container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 40px 20px;
+}
+
+
+/* Título */
+.h1-Titulo {
+font-size: 20px;
+color: #0d5c63;
+margin-bottom: 30px;
+margin-top: -35px;
+}
+
+.contenido-flex {
+    display: flex;
+  flex-direction: row-reverse; /* Cambia el orden: texto a la izquierda e imagen a la derecha */
+  gap: 40px; /* Espacio entre la imagen y el texto */
+  align-items: center; /* Alinea verticalmente al centro */
+}
+
+/* Columna de la imagen (Izquierda) */
+.columna-imagen {
+flex: 1.5;
+}
+
+.columna-imagen img {
+width: 100%;
+height: auto;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pie-imagen {
+font-size: 18px;
+color: #666;
+margin-top: 8px;
+}
+
+.pie-imagen span {
+color: #0d5c63;
+font-weight: bold;
+}
+
+.columna-texto {
+flex: 1.2;
+font-size: 23px;
+line-height: 1.6;
+color: #444;
+margin-top: -50px;
+}
+
+/* Adaptación para pantallas pequeñas (Celulares) */
+@media (max-width: 768px) {
+.contenido-flex {
+    flex-direction: column;
+}
+}
+
+.caracteristicas {
+  background-color: #e2f0ed; /* Tono verde menta pastel similar al de la imagen */
+padding: 25px 20px;
+}
+
+.container-caracteristicas {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+gap: 30px;
+}
+
+/* Tarjetas individuales */
+.tarjeta {
+flex: 1;
+text-align: center;
+padding: 0 10px;
+}
+
+/* Contenedor e imagen circular */
+.imagen-circular {
+width: 220px;
+height: 220px;
+margin: 0 auto 25px auto;
+  border-radius: 50%; /* Hace la imagen perfectamente redonda */
+overflow: hidden;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-circular img {
+width: 100%;
+height: 100%;
+  object-fit: cover; /* Ajusta la foto sin deformarla */
+}
+
+/* Títulos de las tarjetas */
+.tarjeta h3 {
+font-size: 22px;
+color: #2b3a42;
+margin-bottom: 15px;
+font-weight: 700;
+line-height: 1.3;
+}
+
+/* Texto de descripción */
+.tarjeta p {
+font-size: 17px;
+color: #556066;
+line-height: 1.6;
+}
+
+/* Diseño adaptativo para celulares */
+@media (max-width: 768px) {
+.container-caracteristicas {
+    flex-direction: column;
+    gap: 50px;
+}
+}
+
+/* Estilos generales del contenedor del Footer */
+footer {
+background-color: #a2d2db; 
+color: #ffffff;
+padding: 40px 20px;
+}
+
+/* Alineación en 3 columnas */
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+max-width: 1200px;
+margin: 0 auto;
+gap: 30px;
+}
+
+/* Cada columna toma 1 tercio del espacio */
+.left-footer, 
+.center-footer, 
+.right-footer {
+flex: 1;
+}
+
+/* Alineaciones individuales */
+.left-footer {
+text-align: left;
+}
+
+.center-footer {
+text-align: center;
+}
+
+.right-footer {
+text-align: right;
+}
+
+/* Títulos en negrita */
+.titulo-footer {
+font-weight: bold;
+font-size: 20px;
+margin-bottom: 10px;
+color: #2b3a42;
+}
+
+/* Ajustes de textos de dirección e información */
+.p-direccion p, 
+.p-center p {
+margin: 5px 0;
+font-size: 20px;
+line-height: 1.4;
+color: #2b3a42
+}
+
+/* Logo de la clínica */
+.logo-footer img {
+max-width: 280px;
+height: auto;
+margin-bottom: 15px;
+}
+
+.titulo-redes {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333333;
+  
+  /* Controles de posición */
+  margin-top: 8px;  /* Sube el texto (aumenta el valor negativo para subirlo más) */
+  margin-right: 80px; /* Empuja el texto hacia la izquierda */
+  margin-bottom: 10px; /* Mantiene un espacio saludable respecto a los iconos */
+  text-align: right;   /* Mantiene la alineación base a la derecha de la columna */
+}
+
+.redes-iconos {
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 15px !important;
+  margin-top: 5px !important;
+}
+
+/* Incrementamos el tamaño de los iconos PNG */
+.btn-facebook-png img {
+  width: 120px;  /* Tamaño aumentado */
+  height: 120px; /* Tamaño aumentado */
+object-fit: contain;
+transition: transform 0.2s ease;
+}
+
+.btn-facebook-png:hover img {
+transform: scale(1.1);
+}
+
+.btn-tiktok-png img{
+width: 80px !important; /* Reduce este valor (ej. 45px o 40px) si quieres ajustarlo más */
+height: 80px !important;
+object-fit: contain !important;
+margin-top: 23px;
+}
+
+.btn-tiktok-png:hover img {
+transform: scale(1.1);
+}
+
+.quienes-somos-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto; /* Disminuido de 50px a 20px */
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* Controla la distancia exacta entre ambos bloques */
+  margin-top: 120px;
+}
+
+.bloque-filosofia,
+.bloque-mision {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  margin: 0; /* Elimina cualquier margen superior/inferior heredado */
+  padding: 0;
+  background-color: #f4f6f8;
+}
+
+.bloque-filosofia .imagen-box {
+  height: 300px; /* Ajusta la altura para que no empuje el contenido */
+}
+
+/* CAJAS DE TEXTO (Ocupan exactamente el 50% del espacio) */
+.texto-box {
+  flex: 1;
+}
+
+.texto-box h2 {
+  font-size: 32px;
+  color: #0d5c63;
+  margin-bottom: 15px;
+  margin-top: -60px;
+}
+
+.texto-box p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+/* CAJAS DE IMAGEN (Ocupan exactamente el 50% del espacio con altura fija) */
+.imagen-box {
+  flex: 1;
+  height: 350px; /* Todas las imágenes tendrán exactamente esta misma altura */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imagen-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta y recorta la foto automáticamente sin estirarla */
+  display: block;
+}
+
+/* Reduce el ancho del bloque de texto de la izquierda */
+.bloque-mision .mision-texto {
+  flex: 1; /* O puedes poner width: 40%; */
+}
+
+/* Extiende el bloque de la imagen hacia la izquierda */
+.bloque-mision .mision-imagen {
+  flex: 1.5; /* Al ser un número mayor, la imagen se expande más a la izquierda */
+  /* O también puedes usar width: 60%; */
+}
+
+/* Asegura que la imagen llene todo su nuevo espacio asignado */
+.bloque-mision .mision-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Evita que la imagen se deforme al estirarse */
+}
+
+
+.bloque-mision .imagen-box {
+  flex: none;
+  width: 52%; /* Extiende la imagen hacia la izquierda ocupando el 65% */
+  height: 350px;
+  overflow: hidden;
+  border-radius: 8px;
+}
