@@ -10,7 +10,7 @@
     top: 0;                /* Se clava al ras de arriba */
     left: 0;               /* Se alinea a la izquierda de la pantalla */
     width: 100%;           /* Se estira de lado a lado */
-    z-index: 99999 !important; /* Pasa por encima de absolutamente cualquier imagen */
+    z-index: 99999; /* Pasa por encima de absolutamente cualquier imagen */
     box-sizing: border-box;       /* ? Asegura que el menú pase por ENCIMA de las imágenes y no se tape */
 }
 
@@ -41,23 +41,23 @@
 
 /* 2. Al pasar el cursor por encima (Hover) */
 .navbar-links a:hover {
-  color: #0d5c63 !important; /* Verde DentaClinic */
+  color: #0d5c63; /* Verde DentaClinic */
 }
 
 /* 3. Mientras mantienes presionado el clic */
 .navbar-links a:active {
-  color: #0d5c63 !important;
+  color: #0d5c63;
 }
 
 /* 4. Página en la que te encuentras (Activo) */
 .navbar-links a.active {
-  color: #0d5c63 !important;
+  color: #0d5c63;
 }
 
 
 .item-whatsapp a {
 background-color: #25D366;
-  color: #ffffff !important; /* Forzar texto blanco */
+  color: #ffffff; /* Forzar texto blanco */
 padding: 8px 18px;
 border-radius: 20px;
 font-weight: bold;
@@ -304,10 +304,10 @@ margin-bottom: 15px;
 }
 
 .redes-iconos {
-  display: flex !important;
-  justify-content: flex-end !important;
-  gap: 15px !important;
-  margin-top: 5px !important;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 5px;
 }
 
 /* Incrementamos el tamaño de los iconos PNG */
@@ -323,9 +323,9 @@ transform: scale(1.1);
 }
 
 .btn-tiktok-png img{
-width: 80px !important; /* Reduce este valor (ej. 45px o 40px) si quieres ajustarlo más */
-height: 80px !important;
-object-fit: contain !important;
+width: 80px; /* Reduce este valor (ej. 45px o 40px) si quieres ajustarlo más */
+height: 80px;
+object-fit: contain;
 margin-top: 23px;
 }
 
