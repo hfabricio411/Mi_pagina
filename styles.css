@@ -4,7 +4,6 @@
     align-items: center;            
     background-color: #ffffff;      
     padding: 5px 40px;
-
     /* CAMBIAMOS A FIXED PARA FORZAR EL COMPORTAMIENTO */
     position: fixed;       /* Flota por encima de toda la web */
     top: 0;                /* Se clava al ras de arriba */
@@ -163,13 +162,6 @@ color: #444;
 margin-top: -50px;
 }
 
-/* Adaptación para pantallas pequeñas (Celulares) */
-@media (max-width: 768px) {
-.contenido-flex {
-    flex-direction: column;
-}
-}
-
 .caracteristicas {
   background-color: #e2f0ed; /* Tono verde menta pastel similar al de la imagen */
 padding: 25px 20px;
@@ -220,14 +212,6 @@ line-height: 1.3;
 font-size: 17px;
 color: #556066;
 line-height: 1.6;
-}
-
-/* Diseño adaptativo para celulares */
-@media (max-width: 768px) {
-.container-caracteristicas {
-    flex-direction: column;
-    gap: 50px;
-}
 }
 
 /* Estilos generales del contenedor del Footer */
@@ -461,13 +445,6 @@ transform: scale(1.1);
   margin: 0;
 }
 
-/* Adaptación responsive para celulares */
-@media (max-width: 768px) {
-  .servicios-container {
-    grid-template-columns: 1fr; /* Pasa a 1 sola columna en pantallas pequeñas */
-  }
-}
-
 /* Seccion principal con la imagen de fondo */
 .contacto-section {
   width: 100%;
@@ -568,18 +545,115 @@ transform: scale(1.1);
   background-color: #0d5c63;
 }
 
-/* Adaptabilidad a dispositivos móviles */
 @media (max-width: 768px) {
+
+  /* 1. Menú superior */
+  .navbar-Dental {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+    position: relative; /* Evita que tape el contenido en móvil */
+  }
+
+  .navbar-links {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-links a {
+    margin-right: 0;
+    font-size: 15px;
+  }
+
+  /* 2. Sección Principal / Presentación */
+  .contenido-flex {
+    flex-direction: column;
+  }
+
+  .columna-texto {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  /* 3. Sección de Características */
+  .container-caracteristicas {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .tarjeta {
+    padding: 0;
+  }
+
+  /* 4. Footer (Solución a lo que se ve en la foto) */
+  .footer-container {
+    flex-direction: column; /* Pasa de 3 columnas a 1 sola */
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .left-footer, 
+  .center-footer, 
+  .right-footer {
+    width: 100%;
+    text-align: center; /* Centra todo el texto del footer en celular */
+  }
+
+  .titulo-redes {
+    margin-right: 0; /* Quita el empuje hacia la derecha */
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .redes-iconos {
+    justify-content: center; /* Centra los íconos de redes */
+  }
+
+  .btn-facebook-png img {
+    width: 50px; /* Tamaño adecuado para celular */
+    height: 50px;
+  }
+
+  .btn-tiktok-png img {
+    width: 45px; /* Tamaño adecuado para celular */
+    height: 45px;
+    margin-top: 0;
+  }
+
+  /* 5. Quiénes Somos */
+  .bloque-mision,
+  .bloque-vision,
+  .bloque-filosofia {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .imagen-box,
+  .texto-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .texto-box {
+    padding: 20px;
+  }
+
+  /* 6. Servicios */
+  .servicios-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* 7. Contacto */
   .contacto-container {
     flex-direction: column;
     text-align: center;
   }
 
   .contacto-texto h1 {
-    font-size: 32px;
-  }
-
-  .contacto-form-card {
-    width: 100%;
+    font-size: 28px;
+    margin-left: 0;
+    margin-top: 0;
   }
 }
