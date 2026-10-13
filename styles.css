@@ -548,11 +548,22 @@ transform: scale(1.1);
 @media (max-width: 768px) {
 
   /* 1. Menú superior */
-  .navbar-Dental {
+.navbar-Dental {
+    position: fixed;       /* Mantiene el menú pegado arriba al hacer scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;        /* Se mantiene por encima de todo */
+    box-sizing: border-box;
     padding: 10px 15px;
     flex-direction: column;
     gap: 10px;
-    position: relative; /* Evita que tape el contenido en móvil */
+    background-color: #ffffff; /* Fondo blanco obligatorio para que no sea transparente */
+  }
+
+  /* 2. Añade un respiro al cuerpo o a la primera sección para que el menú fijo no tape el contenido */
+  body {
+    padding-top: 140px; /* Ajusta este valor según la altura total de tu menú en celular */
   }
 
   .navbar-links {
@@ -656,4 +667,5 @@ transform: scale(1.1);
     margin-left: 0;
     margin-top: 0;
   }
+
 }
