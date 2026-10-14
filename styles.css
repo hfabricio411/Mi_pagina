@@ -563,7 +563,7 @@ transform: scale(1.1);
 
   /* 2. Añade un respiro al cuerpo o a la primera sección para que el menú fijo no tape el contenido */
   body {
-    padding-top: 140px; /* Ajusta este valor según la altura total de tu menú en celular */
+    padding-top: 95px; /* Ajusta este valor según la altura total de tu menú en celular */
   }
 
   .navbar-links {
@@ -668,4 +668,10 @@ transform: scale(1.1);
     margin-top: 0;
   }
 
+.contacto-section {
+        background-size: cover;
+        background-position: 35% center;
+        min-height: 100vh;
+        padding: 30px 15px;
+    }
 }
