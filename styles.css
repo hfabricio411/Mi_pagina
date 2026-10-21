@@ -577,6 +577,15 @@ transform: scale(1.1);
     font-size: 15px;
   }
 
+  .hero-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+margin-top: 45px;
+}
+
+
   /* 2. Sección Principal / Presentación */
   .contenido-flex {
     flex-direction: column;
@@ -628,7 +637,7 @@ transform: scale(1.1);
   }
 
   .btn-tiktok-png img {
-    width: 45px; /* Tamaño adecuado para celular */
+    width: 35px; /* Tamaño adecuado para celular */
     height: 45px;
     margin-top: 0;
   }
@@ -674,4 +683,20 @@ transform: scale(1.1);
         min-height: 100vh;
         padding: 30px 15px;
     }
+
+.titulo-seccion {
+  margin-top: 35px;
+}
+
+.titulo-servicios {
+  margin-top: 35px;
+}
+
+.servicio-card {
+  margin-top: -25px;
+}
+
+.servicios-container {
+  gap: 36px;
+}
 }
