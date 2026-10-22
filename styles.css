@@ -411,6 +411,11 @@ transform: scale(1.1);
   flex-direction: column;
 }
 
+.servicio-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+
 /* Espacio y altura fija para la imagen */
 .servicio-card .card-imagen {
   width: 100%;
@@ -698,5 +703,11 @@ margin-top: 45px;
 
 .servicios-container {
   gap: 36px;
+}
+
+.btn-tiktok-png img{
+width: 40px; /* Reduce este valor (ej. 45px o 40px) si quieres ajustarlo más */
+height: 35px;
+margin-top: 6px;
 }
 }
